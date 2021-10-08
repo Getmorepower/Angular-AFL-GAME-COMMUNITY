@@ -1,0 +1,27 @@
+$primary: #ffffff;
+
+.navbar{
+    background: $primary;
+    padding: 0.5rem 8rem;
+}
+
+#logoAfl{
+    height: 10em;
+    width: 18em;    
+}
+
+#navbarNav > ul > li:nth-child(n) > a{
+    color: #0336FF;
+    padding: 1em;
+
+        &:hover {
+                    background: darken($primary, $amount: 10%);
+                }
+}
+
+@media screen and (max-width:988px) {
+    .navbar{
+        padding: 1rem;
+    }
+    
+}

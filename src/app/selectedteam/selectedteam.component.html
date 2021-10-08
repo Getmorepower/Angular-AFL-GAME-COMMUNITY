@@ -1,0 +1,820 @@
+<div class="container-md" *ngIf = "team" >
+      <img src="https://squiggle.com.au/{{team.logo}}" width="50" height="50" class="d-inline-block align-top" alt=""> {{team.name}}
+    <button (click)="getName('all')" type="button" >All Games</button>
+    <button  (click)="getName('won')" type="button" >Games Won</button>
+    <button  (click)="getName('played')" type="button" >Games Played</button>
+    <button (click)="getName('uppcomin')" type="button" >upcomming</button>
+    <button (click)="getName('prediction')" type="button" >prediction</button>
+    <button (click)="getName('rival')" type="button" >rival</button>
+    <button onclick="https:www.youtube.com/c/AFL">Watch AFL Video</button>
+    <button onclick="https:www.tab.com.au/sports/betting/AFL%20Football">Find the odds</button>
+    <button (click)="getName('premiership-winners')" type="button">premiership-winners</button>     
+</div>
+
+
+<div class="container">  
+     
+    <div class="row" *ngIf = "name=='premiership-winners'">
+        <div id="result" class="col-sm-12 mt-2 mr-2 mb-2" *ngFor ="let game of games">
+            <table class="table text-center">
+                
+                    <thead>
+                    <tr>
+                    <td><strong>Year</strong></td>
+                    <td><strong>Premiership team</strong></td>
+                    <td><strong>Runner-up</strong></td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                    <td>2021</td>
+                    <td>Melbourne</td>
+                    <td>Western Bulldogs</td>
+                    </tr>
+                    <tr>
+                    <td>2020</td>
+                    <td>Richmond</td>
+                    <td>Geelong</td>
+                    </tr>
+                    <tr>
+                    <td>2019</td>
+                    <td>Richmond</td>
+                    <td>GWS Giants</td>
+                    </tr>
+                    <tr>
+                    <td>2018</td>
+                    <td>West Coast</td>
+                    <td>Collingwood</td>
+                    </tr>
+                    <tr>
+                    <td>2017</td>
+                    <td>Richmond</td>
+                    <td>Adelaide</td>
+                    </tr>
+                    <tr>
+                    <td>2016</td>
+                    <td>Western Bulldogs</td>
+                    <td>Sydney Swans</td>
+                    </tr>
+                    <tr>
+                    <td>2015</td>
+                    <td>Hawthorn</td>
+                    <td>West Coast</td>
+                    </tr>
+                    <tr>
+                    <td>2014</td>
+                    <td>Hawthorn</td>
+                    <td>Sydney Swans</td>
+                    </tr>
+                    <tr>
+                    <td>2013</td>
+                    <td>Hawthorn</td>
+                    <td>Fremantle Dockers</td>
+                    </tr>
+                    <tr>
+                    <td>2012</td>
+                    <td>Sydney Swans</td>
+                    <td>Hawthorn</td>
+                    </tr>
+                    <tr>
+                    <td>2011</td>
+                    <td>Geelong</td>
+                    <td>Collingwood</td>
+                    </tr>
+                    <tr>
+                    <td>2010</td>
+                    <td>Collingwood</td>
+                    <td>St Kilda</td>
+                    </tr>
+                    <tr>
+                    <td>2009</td>
+                    <td>Geelong</td>
+                    <td>St Kilda</td>
+                    </tr>
+                    <tr>
+                    <td>2008</td>
+                    <td>Hawthorn</td>
+                    <td>Geelong</td>
+                    </tr>
+                    <tr>
+                    <td>2007</td>
+                    <td>Geelong</td>
+                    <td>Port Adelaide</td>
+                    </tr>
+                    <tr>
+                    <td>2006</td>
+                    <td>West Coast</td>
+                    <td>Sydney Swans</td>
+                    </tr>
+                    <tr>
+                    <td>2005</td>
+                    <td>Sydney Swans</td>
+                    <td>West Coast</td>
+                    </tr>
+                    <tr>
+                    <td>2004</td>
+                    <td>Port Adelaide</td>
+                    <td>Brisbane Lions</td>
+                    </tr>
+                    <tr>
+                    <td>2003</td>
+                    <td>Brisbane Lions</td>
+                    <td>Collingwood</td>
+                    </tr>
+                    <tr>
+                    <td>2002</td>
+                    <td>Brisbane Lions</td>
+                    <td>Collingwood</td>
+                    </tr>
+                    <tr>
+                    <td>2001</td>
+                    <td>Brisbane Lions</td>
+                    <td>Essendon</td>
+                    </tr>
+                    <tr>
+                    <td>2000</td>
+                    <td>Essendon</td>
+                    <td>Melbourne</td>
+                    </tr>
+                    <tr>
+                    <td>1999</td>
+                    <td>North Melbourne</td>
+                    <td>Carlton</td>
+                    </tr>
+                    <tr>
+                    <td>1998</td>
+                    <td>Adelaide</td>
+                    <td>North Melbourne</td>
+                    </tr>
+                    <tr>
+                    <td>1997</td>
+                    <td>Adelaide</td>
+                    <td>St Kilda</td>
+                    </tr>
+                    <tr>
+                    <td>1996</td>
+                    <td>North Melbourne</td>
+                    <td>Sydney Swans</td>
+                    </tr>
+                    <tr>
+                    <td>1995</td>
+                    <td>Carlton</td>
+                    <td>Geelong</td>
+                    </tr>
+                    <tr>
+                    <td>1994</td>
+                    <td>West Coast</td>
+                    <td>Geelong</td>
+                    </tr>
+                    <tr>
+                    <td>1993</td>
+                    <td>Essendon</td>
+                    <td>Carlton</td>
+                    </tr>
+                    <tr>
+                    <td>1992</td>
+                    <td>West Coast</td>
+                    <td>Geelong</td>
+                    </tr>
+                    <tr>
+                    <td>1991</td>
+                    <td>Hawthorn</td>
+                    <td>West Coast</td>
+                    </tr>
+                    <tr>
+                    <td>1990</td>
+                    <td>Collingwood</td>
+                    <td>Essendon</td>
+                    </tr>
+                    <tr>
+                    <td>1989</td>
+                    <td>Hawthorn</td>
+                    <td>Geelong</td>
+                    </tr>
+                    <tr>
+                    <td>1988</td>
+                    <td>Hawthorn</td>
+                    <td>Melbourne</td>
+                    </tr>
+                    <tr>
+                    <td>1987</td>
+                    <td>Carlton</td>
+                    <td>Hawthorn</td>
+                    </tr>
+                    <tr>
+                    <td>1986</td>
+                    <td>Hawthorn</td>
+                    <td>Carlton</td>
+                    </tr>
+                    <tr>
+                    <td>1985</td>
+                    <td>Essendon</td>
+                    <td>Hawthorn</td>
+                    </tr>
+                    <tr>
+                    <td>1984</td>
+                    <td>Essendon</td>
+                    <td>Hawthorn</td>
+                    </tr>
+                    <tr>
+                    <td>1983</td>
+                    <td>Hawthorn</td>
+                    <td>Essendon</td>
+                    </tr>
+                    <tr>
+                    <td>1982</td>
+                    <td>Carlton</td>
+                    <td>Richmond</td>
+                    </tr>
+                    <tr>
+                    <td>1981</td>
+                    <td>Carlton</td>
+                    <td>Collingwood</td>
+                    </tr>
+                    <tr>
+                    <td>1980</td>
+                    <td>Richmond</td>
+                    <td>Collingwood</td>
+                    </tr>
+                    <tr>
+                    <td>1979</td>
+                    <td>Carlton</td>
+                    <td>Collingwood</td>
+                    </tr>
+                    <tr>
+                    <td>1978</td>
+                    <td>Hawthorn</td>
+                    <td>North Melbourne</td>
+                    </tr>
+                    <tr>
+                    <td>1977</td>
+                    <td>North Melbourne</td>
+                    <td>Collingwood</td>
+                    </tr>
+                    <tr>
+                    <td>1976</td>
+                    <td>Hawthorn</td>
+                    <td>North Melbourne</td>
+                    </tr>
+                    <tr>
+                    <td>1975</td>
+                    <td>North Melbourne</td>
+                    <td>Hawthorn</td>
+                    </tr>
+                    <tr>
+                    <td>1974</td>
+                    <td>Richmond</td>
+                    <td>North Melbourne</td>
+                    </tr>
+                    <tr>
+                    <td>1973</td>
+                    <td>Richmond</td>
+                    <td>Carlton</td>
+                    </tr>
+                    <tr>
+                    <td>1972</td>
+                    <td>Carlton</td>
+                    <td>Richmond</td>
+                    </tr>
+                    <tr>
+                    <td>1971</td>
+                    <td>Hawthorn</td>
+                    <td>St Kilda</td>
+                    </tr>
+                    <tr>
+                    <td>1970</td>
+                    <td>Carlton</td>
+                    <td>Collingwood</td>
+                    </tr>
+                    <tr>
+                    <td>1969</td>
+                    <td>Richmond</td>
+                    <td>Carlton</td>
+                    </tr>
+                    <tr>
+                    <td>1968</td>
+                    <td>Carlton</td>
+                    <td>Essendon</td>
+                    </tr>
+                    <tr>
+                    <td>1967</td>
+                    <td>Richmond</td>
+                    <td>Geelong</td>
+                    </tr>
+                    <tr>
+                    <td>1966</td>
+                    <td>St Kilda</td>
+                    <td>Collingwood</td>
+                    </tr>
+                    <tr>
+                    <td>1965</td>
+                    <td>Essendon</td>
+                    <td>St Kilda</td>
+                    </tr>
+                    <tr>
+                    <td>1964</td>
+                    <td>Melbourne</td>
+                    <td>Collingwood</td>
+                    </tr>
+                    <tr>
+                    <td>1963</td>
+                    <td>Geelong</td>
+                    <td>Hawthorn</td>
+                    </tr>
+                    <tr>
+                    <td>1962</td>
+                    <td>Essendon</td>
+                    <td>Carlton</td>
+                    </tr>
+                    <tr>
+                    <td>1961</td>
+                    <td>Hawthorn</td>
+                    <td>Footscray</td>
+                    </tr>
+                    <tr>
+                    <td>1960</td>
+                    <td>Melbourne</td>
+                    <td>Collingwood</td>
+                    </tr>
+                    <tr>
+                    <td>1959</td>
+                    <td>Melbourne</td>
+                    <td>Essendon</td>
+                    </tr>
+                    <tr>
+                    <td>1958</td>
+                    <td>Collingwood</td>
+                    <td>Melbourne</td>
+                    </tr>
+                    <tr>
+                    <td>1957</td>
+                    <td>Melbourne</td>
+                    <td>Essendon</td>
+                    </tr>
+                    <tr>
+                    <td>1956</td>
+                    <td>Melbourne</td>
+                    <td>Collingwood</td>
+                    </tr>
+                    <tr>
+                    <td>1955</td>
+                    <td>Melbourne</td>
+                    <td>Collingwood</td>
+                    </tr>
+                    <tr>
+                    <td>1954</td>
+                    <td>Footscray</td>
+                    <td>Melbourne</td>
+                    </tr>
+                    <tr>
+                    <td>1953</td>
+                    <td>Collingwood</td>
+                    <td>Geelong</td>
+                    </tr>
+                    <tr>
+                    <td>1952</td>
+                    <td>Geelong</td>
+                    <td>Collingwood</td>
+                    </tr>
+                    <tr>
+                    <td>1951</td>
+                    <td>Geelong</td>
+                    <td>Essendon</td>
+                    </tr>
+                    <tr>
+                    <td>1950</td>
+                    <td>Essendon</td>
+                    <td>North Melbourne</td>
+                    </tr>
+                    <tr>
+                    <td>1949</td>
+                    <td>Essendon</td>
+                    <td>Carlton</td>
+                    </tr>
+                    <tr>
+                    <td>1948</td>
+                    <td>Melbourne</td>
+                    <td>Essendon</td>
+                    </tr>
+                    <tr>
+                    <td>1947</td>
+                    <td>Carlton</td>
+                    <td>Essendon</td>
+                    </tr>
+                    <tr>
+                    <td>1946</td>
+                    <td>Essendon</td>
+                    <td>Melbourne</td>
+                    </tr>
+                    <tr>
+                    <td>1945</td>
+                    <td>Carlton</td>
+                    <td>South Melbourne</td>
+                    </tr>
+                    <tr>
+                    <td>1944</td>
+                    <td>Fitzroy</td>
+                    <td>Richmond</td>
+                    </tr>
+                    <tr>
+                    <td>1943</td>
+                    <td>Richmond</td>
+                    <td>Essendon</td>
+                    </tr>
+                    <tr>
+                    <td>1942</td>
+                    <td>Essendon</td>
+                    <td>Richmond</td>
+                    </tr>
+                    <tr>
+                    <td>1941</td>
+                    <td>Melbourne</td>
+                    <td>Essendon</td>
+                    </tr>
+                    <tr>
+                    <td>1940</td>
+                    <td>Melbourne</td>
+                    <td>Richmond</td>
+                    </tr>
+                    <tr>
+                    <td>1939</td>
+                    <td>Melbourne</td>
+                    <td>Collingwood</td>
+                    </tr>
+                    <tr>
+                    <td>1938</td>
+                    <td>Carlton</td>
+                    <td>Collingwood</td>
+                    </tr>
+                    <tr>
+                    <td>1937</td>
+                    <td>Geelong</td>
+                    <td>Collingwood</td>
+                    </tr>
+                    <tr>
+                    <td>1936</td>
+                    <td>Collingwood</td>
+                    <td>South Melbourne</td>
+                    </tr>
+                    <tr>
+                    <td>1935</td>
+                    <td>Collingwood</td>
+                    <td>South Melbourne</td>
+                    </tr>
+                    <tr>
+                    <td>1934</td>
+                    <td>Richmond</td>
+                    <td>South Melbourne</td>
+                    </tr>
+                    <tr>
+                    <td>1933</td>
+                    <td>South Melbourne</td>
+                    <td>Richmond</td>
+                    </tr>
+                    <tr>
+                    <td>1932</td>
+                    <td>Richmond</td>
+                    <td>Carlton</td>
+                    </tr>
+                    <tr>
+                    <td>1931</td>
+                    <td>Geelong</td>
+                    <td>Richmond</td>
+                    </tr>
+                    <tr>
+                    <td>1930</td>
+                    <td>Collingwood</td>
+                    <td>Geelong</td>
+                    </tr>
+                    <tr>
+                    <td>1929</td>
+                    <td>Collingwood</td>
+                    <td>Richmond</td>
+                    </tr>
+                    <tr>
+                    <td>1928</td>
+                    <td>Collingwood</td>
+                    <td>Richmond</td>
+                    </tr>
+                    <tr>
+                    <td>1927</td>
+                    <td>Collingwood</td>
+                    <td>Richmond</td>
+                    </tr>
+                    <tr>
+                    <td>1926</td>
+                    <td>Melbourne</td>
+                    <td>Collingwood</td>
+                    </tr>
+                    <tr>
+                    <td>1925</td>
+                    <td>Geelong</td>
+                    <td>Collingwood</td>
+                    </tr>
+                    <tr>
+                    <td>1924</td>
+                    <td>Essendon</td>
+                    <td>Richmond</td>
+                    </tr>
+                    <tr>
+                    <td>1923</td>
+                    <td>Essendon</td>
+                    <td>Fitzroy</td>
+                    </tr>
+                    <tr>
+                    <td>1922</td>
+                    <td>Fitzroy</td>
+                    <td>Collingwood</td>
+                    </tr>
+                    <tr>
+                    <td>1921</td>
+                    <td>Richmond</td>
+                    <td>Carlton</td>
+                    </tr>
+                    <tr>
+                    <td>1920</td>
+                    <td>Richmond</td>
+                    <td>Collingwood</td>
+                    </tr>
+                    <tr>
+                    <td>1919</td>
+                    <td>Collingwood</td>
+                    <td>Richmond</td>
+                    </tr>
+                    <tr>
+                    <td>1918</td>
+                    <td>South Melbourne</td>
+                    <td>Collingwood</td>
+                    </tr>
+                    <tr>
+                    <td>1917</td>
+                    <td>Collingwood</td>
+                    <td>Fitzroy</td>
+                    </tr>
+                    <tr>
+                    <td>1916</td>
+                    <td>Fitzroy</td>
+                    <td>Carlton</td>
+                    </tr>
+                    <tr>
+                    <td>1915</td>
+                    <td>Carlton</td>
+                    <td>Collingwood</td>
+                    </tr>
+                    <tr>
+                    <td>1914</td>
+                    <td>Carlton</td>
+                    <td>South Melbourne</td>
+                    </tr>
+                    <tr>
+                    <td>1913</td>
+                    <td>Fitzroy</td>
+                    <td>St Kilda</td>
+                    </tr>
+                    <tr>
+                    <td>1912</td>
+                    <td>Essendon</td>
+                    <td>South Melbourne</td>
+                    </tr>
+                    <tr>
+                    <td>1911</td>
+                    <td>Essendon</td>
+                    <td>Collingwood</td>
+                    </tr>
+                    <tr>
+                    <td>1910</td>
+                    <td>Collingwood</td>
+                    <td>Carlton</td>
+                    </tr>
+                    <tr>
+                    <td>1909</td>
+                    <td>South Melbourne</td>
+                    <td>Carlton</td>
+                    </tr>
+                    <tr>
+                    <td>1908</td>
+                    <td>Carlton</td>
+                    <td>Essendon</td>
+                    </tr>
+                    <tr>
+                    <td>1907</td>
+                    <td>Carlton</td>
+                    <td>South Melbourne</td>
+                    </tr>
+                    <tr>
+                    <td>1906</td>
+                    <td>Carlton</td>
+                    <td>Fitzroy</td>
+                    </tr>
+                    <tr>
+                    <td>1905</td>
+                    <td>Fitzroy</td>
+                    <td>Collingwood</td>
+                    </tr>
+                    <tr>
+                    <td>1904</td>
+                    <td>Fitzroy</td>
+                    <td>Carlton</td>
+                    </tr>
+                    <tr>
+                    <td>1903</td>
+                    <td>Collingwood</td>
+                    <td>Fitzroy</td>
+                    </tr>
+                    <tr>
+                    <td>1902</td>
+                    <td>Collingwood</td>
+                    <td>Essendon</td>
+                    </tr>
+                    <tr>
+                    <td>1901</td>
+                    <td>Essendon</td>
+                    <td>Collingwood</td>
+                    </tr>
+                    <tr>
+                    <td>1900</td>
+                    <td>Melbourne</td>
+                    <td>Fitzroy</td>
+                    </tr>
+                    <tr>
+                    <td>1899</td>
+                    <td>Fitzroy</td>
+                    <td>South Melbourne</td>
+                    </tr>
+                    <tr>
+                    <td>1898</td>
+                    <td>Fitzroy</td>
+                    <td>Essendon</td>
+                    </tr>
+                    <tr>
+                    <td>1897</td>
+                    <td>Essendon</td>
+                    <td>Geelong</td>
+                    </tr>
+                    </tbody>
+                    
+            
+          </table>  
+        </div>
+    </div>
+</div>
+
+<div class="container">  
+     
+    <div class="row" *ngIf = "name=='all'">
+        <div id="result" class="col-sm-12 mt-2 mr-2 mb-2" *ngFor ="let game of games">
+            <table class="table text-center">
+                 
+              <tr>
+                  <th>Home Team</th>
+                  <th>Score</th>
+                  <th>Away Team</th>
+                  <th>Winner</th>
+                  <th>Venue</th>
+              </tr>
+              
+              <tr>
+                  <td>{{game.hteam}}</td>
+                  <td>{{game.hscore}}-{{game.ascore}}</td>
+                  <td>{{game.ateam}}</td>
+                  <td>{{game.winner}}</td>
+                  <td>{{game.venue}}</td>
+              </tr>
+            
+          </table>  
+        </div>
+    </div>
+</div>
+
+
+<div class="container">   
+    <div class="row" *ngIf = "name=='won'">
+        <div id="result" class="col-sm-12 mr-2 mb-2" *ngFor ="let game of gameswon">
+            <table class="table text-center">
+                
+              <tr>
+                  <th>Home Team</th>
+                  <th>Score</th>
+                  <th>Away Team</th>
+                  <th>Winner</th>
+                  <th>Venue</th>
+              </tr>
+              
+              <tr>
+                  <td>{{game.hteam}}</td>
+                  <td>{{game.hscore}}-{{game.ascore}}</td>
+                  <td>{{game.ateam}}</td>
+                  <td>{{game.winner}}</td>
+                  <td>{{game.venue}}</td>
+              </tr>
+            
+          </table>  
+
+        </div>
+    </div>
+</div>
+
+
+<div class="container">   
+    <div class="row" *ngIf = "name=='played'">
+        <div id="result" class="col-sm-12 mr-2 mb-2" *ngFor ="let game of gamesPlayed">
+            <table class="table text-center">
+                
+              <tr>
+                  <th>Home Team</th>
+                  <th>Score</th>
+                  <th>Away Team</th>
+                  <th>Winner</th>
+                  <th>Venue</th>
+              </tr>
+              
+              <tr>
+                  <td>{{game.hteam}}</td>
+                  <td>{{game.hscore}}-{{game.ascore}}</td>
+                  <td>{{game.ateam}}</td>
+                  <td>{{game.winner}}</td>
+                  <td>{{game.venue}}</td>
+              </tr>
+            
+          </table>  
+        </div>
+    </div>
+</div>
+
+
+<div class="container">   
+    <div class="row" *ngIf = "name=='uppcomin'">
+        <div id="result" class="col-sm-12 mr-2 mb-2" *ngFor ="let game of gamesUpp | slice:0:4;">
+            <table class="table text-center">
+                
+            <tr>
+                <th>Home Team</th>
+               
+                <th>Away Team</th>
+                <th>Winner</th>
+                <th>Venue</th>
+            </tr>
+               
+            <tr>
+                <td>{{game.hteam}}</td>
+               
+                <td>{{game.ateam}}</td>
+                <td>{{game.winner}}</td>
+                <td>{{game.venue}}</td>
+            
+            </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<div class="container" *ngIf = "name=='prediction'">
+    <table class="table text-center">
+        
+            <tr>
+                <th scope="col" >Home Team</th>
+                <th scope="col" >Away Team</th>
+                <th scope="col" >Tip</th>
+                <th scope="col" >Source</th>
+            </tr>
+        
+
+        <tr *ngFor="let t of tips">
+            <td>{{t.hteam}}</td>
+            <td>{{t.ateam}}</td>
+            <td>{{t.tip}}</td>
+            <td>{{t.source}}</td>
+        </tr>
+    </table>
+    <br><br>
+</div>
+
+
+<div class="container">   
+    <div class="row" *ngIf = "name=='rival'">
+        <div id="result" class="col-sm-12 mr-2 mb-2" *ngFor ="let game of games | slice:0:1;">
+            <table class="table text-center">
+                
+            <tr>
+                <th>Home Team</th>
+               
+                <th>Away Team</th>
+                <th>Winner</th>
+                <th>Venue</th>
+            </tr>
+                
+            <tr>
+                <td>{{game.hteam}}</td>
+               
+                <td>{{game.ateam}}</td>
+                <td>{{game.winner}}</td>
+                <td>{{game.venue}}</td>
+            
+            </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+

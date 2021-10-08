@@ -1,0 +1,10 @@
+#teamE{
+    background: #eeeeee;
+    &:hover {
+                background: darken(#eeeeee, $amount: 10%);
+            }
+
+}
+
+
+
