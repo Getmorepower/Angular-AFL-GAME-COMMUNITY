@@ -1,0 +1,11 @@
+
+<div class="container-fluid text-center">
+    <div class="row">
+        <div id="teamE" class="col mt-2 mr-2 mb-2" *ngFor="let team of teams | slice:0:18;" (click)="onSelect(team)">
+            <img class="mw-100" src="https://squiggle.com.au/{{team.logo}}" alt="Max-width 100%">
+        </div>
+    </div>
+   
+    
+    <app-selectedteam [team]="selectedTeam"></app-selectedteam>
+</div>
